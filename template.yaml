@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: AWS Lambda Template Project
+Resources:
+  ReverseStringFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: target/lambda-template-1.0-SNAPSHOT-aws.jar
+      Handler: com.univeris.lambda.MyStringHandlers
+      Runtime: java8
+      Timeout: 10
